@@ -1,8 +1,5 @@
-
 # GitHub Actions Runner Images
-
 **Table of Contents**
-
 - [About](#about)
 - [Available Images](#available-images)
 - [Announcements](#announcements)
@@ -11,14 +8,10 @@
 - [Software and Image Support](#software-and-image-support)
 - [How to Interact with the Repo](#how-to-interact-with-the-repo)
 - [FAQs](#faqs)
-
 ## About
-
 This repository contains the source code used to create the VM images for [GitHub-hosted runners](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners) used for Actions, as well as for [Microsoft-hosted agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops#use-a-microsoft-hosted-agent) used for Azure Pipelines.
 To build a VM machine from this repo's source, see the [instructions](docs/create-image-and-azure-resources.md).
-
 ## Available Images
-
 | Image | YAML Label | Included Software | Rollout Status of Latest Image Release |
 | --------------------|---------------------|--------------------|--------------------|
 | Ubuntu 24.04 <sup>beta</sup> | `ubuntu-24.04` | [ubuntu-24.04] | ![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fmikhailkoliada%2F35b243dd6e217d041fe3dfa5b4e2e2ed%2Fraw%2Fubuntu24.json) |
@@ -32,12 +25,9 @@ To build a VM machine from this repo's source, see the [instructions](docs/creat
 | macOS 11 <sup>deprecated</sup> | `macos-11`| [macOS-11] | ![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fmikhailkoliada%2F35b243dd6e217d041fe3dfa5b4e2e2ed%2Fraw%2FmacOS-11.json) |
 | Windows Server 2022 | `windows-latest` or `windows-2022` | [windows-2022] | ![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fmikhailkoliada%2F35b243dd6e217d041fe3dfa5b4e2e2ed%2Fraw%2Fwin22.json) |
 | Windows Server 2019 | `windows-2019` | [windows-2019] | ![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fmikhailkoliada%2F35b243dd6e217d041fe3dfa5b4e2e2ed%2Fraw%2Fwin19.json) |
-
 ### Label scheme
-
 - In general the `-latest` label is used for the latest OS image version that is GA
 - Before moving the`-latest` label to a new OS version we will announce the change and give sufficient lead time for users to update their workflows
-
 [ubuntu-24.04]: https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md
 [ubuntu-22.04]: https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2204-Readme.md
 [ubuntu-20.04]: https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2004-Readme.md
@@ -54,11 +44,8 @@ To build a VM machine from this repo's source, see the [instructions](docs/creat
 ## Announcements
 
 See notable upcoming changes by viewing issues with the [Announcement](https://github.com/actions/runner-images/labels/Announcement) label.
-
 ## Image Definitions
-
 ### Beta
-
 The purpose of a Beta is to collect feedback on an image before it is released to GA. The goal of a Beta is to identify and fix any potential issues that exist on that
 image. Images are updated on a weekly cadence. Any workflows that run on a beta image do not fall under the customer [SLA](https://github.com/customer-terms/github-online-services-sla) in place for Actions.
 Customers choosing to use Beta images are encouraged to provide feedback in the runner-images repo by creating an issue. A Beta may take on different availability, i.e. public vs private.
